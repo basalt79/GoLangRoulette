@@ -4,10 +4,11 @@ os:
 - linux
 - osx
 
-go_import_path: github.com/basalt79/GoLangRoulette/src/game
-
 go:
 - 1.8
 
 install:
 - go get golang.org/x/sys/unix
+- go get github.com/basalt79/GoLangRoulette/game
+- go get github.com/basalt79/GoLangRoulette/game/gameType
+- go get github.com/basalt79/GoLangRoulette/util
