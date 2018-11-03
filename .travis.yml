@@ -4,6 +4,8 @@ os:
 - linux
 - osx
 
+go_import_path: src
+
 go:
 - 1.8
 
