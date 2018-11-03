@@ -2,30 +2,19 @@ package gameType
 
 import (
 	"fmt"
-	"game"
 	"util"
 )
 
-func Straight() {
+func Straight() bool {
 	fmt.Println("Straight was called")
-
-	bet := util.ConvertToInteger(game.ConsolePrompt("on number: "))
-	//if 0 <= bet <= 36 {
-	//
-	//}
-
-	//print "{} EUR on {}. No more bets please!".format(amount, bet)
-	//rnd = spinRoulette()
-	//if rnd == bet:
-	//return win(bank, amount, betType)
-	//else:
-	//return loss(bank, amount)
-	//else:
-	//print "invalid bet... try again!"
-	//else:
-	//print "invalid bet..."
-	//else:
-	//print "Irregular Bet! Bank Account: {} EUR".format(bank)
-	//else:
-	//print "invalid bet..."
+	bet := util.ConvertToInteger(util.ConsolePrompt("Choose your number: "))
+	if bet >= 0 && bet <= 36 {
+		fmt.Println(fmt.Sprintf("You choose <%v> no more bets please!", bet))
+		spin := util.SpinRoulette()
+		return spin == bet
+	} else {
+		fmt.Println("Invalid Number, please choose a number between 0 and 36.")
+		return Straight()
+	}
+	return false
 }
