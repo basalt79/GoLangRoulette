@@ -4,7 +4,7 @@ os:
 - linux
 - osx
 
-go_import_path: src
+go_import_path: github.com/basalt79/GoLangRoulette/src/game
 
 go:
 - 1.8
